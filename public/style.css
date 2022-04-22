@@ -1,0 +1,80 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-size: 10px;
+}
+h1 , h2 {
+    font-family: 'Square Peg', cursive;
+}
+.cabecera {
+ background-color: #036;
+}
+.textoCabecera , .tabla , .txt{
+    color: #fd7702;
+}
+.tabla {
+    border-color: #fd7702;
+}
+.tabla {
+    background-color: #002347;
+}
+.explicacio {
+    color: #ff5003;
+}
+.puntos {
+    background-color: #036;
+}
+.equipo:hover , .pincha:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+}
+li:hover  {
+    transform: rotateZ(-20deg);
+}
+.submit:hover {
+    transform: scale(0.8);
+}
+.pelota {
+    animation: spinner3 400ms infinite;
+}
+
+@keyframes spinner3 {
+to {
+transform: rotate(270deg);
+}
+}
+@keyframes swing {
+    15% {
+    transform: translateX(5px);
+    }
+    30% {
+    transform: translateX(-5px);
+    }
+    50% {
+    transform: translateX(3px);
+    }
+    65% {
+    transform: translateX(-3px);
+    }
+    80% {
+    transform: translateX(2px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+
+
+
+/* Color Palette
+#fff
+#002347
+#036
+#003f7d
+#ff8e00
+#fd7702
+#ff5003 */
