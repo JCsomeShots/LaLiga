@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('match', function (Blueprint $table) {
+        Schema::create('matches', function (Blueprint $table) {
             $table->id();
             $table->foreignId('local')->references('id')->on('teams');
             $table->foreignId('visitante')->references('id')->on('teams');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partidos');
+        Schema::dropIfExists('matches');
     }
 };
