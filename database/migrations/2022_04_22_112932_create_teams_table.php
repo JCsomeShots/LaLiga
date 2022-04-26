@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('slogan')->unique();
-            $table->date('date_creation');
-            $table->enum('creation', ['-2', '-5', '+5'])->default('-2');
+            $table->string('slogan')->unique()->nullable();
+            //$table->date('date_creation')->nullable();
+            $table->enum('creation', ['-2', '-5', '+5']);
+            // ->default('-2');
             $table->timestamps();
         });
     }

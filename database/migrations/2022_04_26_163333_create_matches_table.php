@@ -11,12 +11,14 @@ return new class extends Migration
      *
      * @return void
      */
+   
     public function up()
     {
-        Schema::create('matches', function (Blueprint $table) {
+        Schema::create('partidos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('local')->references('id')->on('teams');
             $table->foreignId('visitante')->references('id')->on('teams');
+            $table->enum('estado',['terminado','en ejecución'])->default('en ejecución');
             $table->timestamps();
         });
     }
@@ -28,6 +30,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matches');
+        Schema::dropIfExists('partidos');
     }
+   
 };
