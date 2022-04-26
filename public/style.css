@@ -5,12 +5,13 @@
 }
 body {
     font-size: 10px;
+    background: url("./img/pelotaGraducacio.png");
 }
 h1 , h2 {
     font-family: 'Square Peg', cursive;
 }
-.cabecera {
- background-color: #036;
+.cabecera  {
+ background-color: #002347;
 }
 .textoCabecera , .tabla , .txt{
     color: #fd7702;
@@ -21,11 +22,11 @@ h1 , h2 {
 .tabla {
     background-color: #002347;
 }
-.explicacio {
+.explicacio  {
     color: #ff5003;
 }
 .puntos {
-    background-color: #036;
+    background-color: #002347;
 }
 .equipo:hover , .pincha:hover {
     animation: swing 1s ease;
@@ -36,9 +37,6 @@ li:hover  {
 }
 .submit:hover {
     transform: scale(0.8);
-}
-.pelota {
-    animation: spinner3 400ms infinite;
 }
 
 @keyframes spinner3 {
