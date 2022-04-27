@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class NavigationController extends Controller
 {
+
+
     public function clasification(){
         return view('clasification');
     }
@@ -23,6 +25,7 @@ class NavigationController extends Controller
     }
     
     public function show(){
+        
         return view('show');
     }
 
