@@ -20,11 +20,19 @@ Route::get('/', function () {
 
 
 Route::get('/clasification', [NavigationController::class, 'clasification'])->name('clasification');
+
 Route::get('/register', [NavigationController::class, 'register'])->name('register');
+
 Route::get('/calendar', [NavigationController::class, 'calendar'])->name('calendar');
+
 Route::get('/result', [NavigationController::class, 'result'])->name('result');
+
 Route::get('/show', [NavigationController::class, 'show'])->name('show');
+
 Route::get('/delete', [NavigationController::class, 'delete'])->name('delete');
+
 Route::get('/organization', [NavigationController::class, 'organization'])->name('organization');
 
 Route::get('/show2{id}', [NavigationController::class, 'show2'])->name('show2');
+
+Route::post('teams', [NavigationController::class, 'store'])->name('teams.store');

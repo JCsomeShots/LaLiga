@@ -5,6 +5,10 @@
 @section('content')
 
 <section class="laTabla">
+
+
+
+
     <div class="cabeceraTabla flex justify-center items-center">
         <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
             <tr class="p-2 items-center text-sm">
@@ -16,7 +20,19 @@
                 <th class="txt py-3 px-6 font-base">PE</th>
                 <th class="txt py-3 px-6 font-base">PP</th>
             </tr>
-            <tr>
+@foreach ($teams as $team)
+<tr>
+    <td class="txt py-3 pr-6 font-base pl-4 ">1</th>
+    <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show')}}"> {{$team->name}}</a></th>
+    <td class="txt py-3 pr-6 pl-8 font-base puntos">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
+</tr>
+
+@endforeach
+            {{-- <tr>
                 <td class="txt py-3 pr-6 font-base pl-4 ">1</th>
                 <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show')}}"> Madrid</a></th>
                 <td class="txt py-3 pr-6 pl-8 font-base puntos">3</th>
@@ -24,8 +40,8 @@
                 <td class="txt py-3 pr-6 pl-8 font-base mx-auto">1</th>
                 <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
                 <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-            </tr>
-            <tr class="">
+            </tr> --}}
+            {{-- <tr class="">
                 <td class="txt py-3 pr-6 font-base pl-4 ">2</th>
                 <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show')}}">Barcelona</a></th>
                 <td class="txt py-3 pr-6 pl-8 font-base puntos">0</th>
@@ -33,7 +49,7 @@
                 <td class="txt py-3 pr-6 pl-8 font-base ">0</th>
                 <td class="txt py-3 pr-6 pl-8 font-base ">0</th>
                 <td class="txt py-3 pr-6 pl-8 font-base ">1</th>
-            </tr>
+            </tr> --}}
         </table>
     </div>
     <div class="explicacio txt flex justify-center mt-2">

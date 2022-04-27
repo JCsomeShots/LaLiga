@@ -33,7 +33,7 @@ h1 {
     animation-iteration-count: 1;
 }
 .queGira:hover  {
-    transform: rotateZ(-20deg);
+    transform: rotateZ(-10deg);
 }
 .submit:hover {
     transform: scale(0.8);

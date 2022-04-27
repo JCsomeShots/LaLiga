@@ -48,4 +48,17 @@ class NavigationController extends Controller
         //return $teams;
         return view('delete', compact('teams'));
     }
+
+    public function store(Request $request){
+        // return $request->all();
+        $team = new Team();
+        $team->name = $request->name;
+        $team->slogan = $request->slogan;
+        $team->creation = $request->creation;
+        //return $team;
+        $team->save();
+        return redirect()->route('show2', $team->id);
+    }
+
+
 }

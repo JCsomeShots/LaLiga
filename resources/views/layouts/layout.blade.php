@@ -44,7 +44,7 @@
                     <a href="{{route('register')}}">Nuevo Equipo</a>
                 </li>
                 <li class="cursor-pointer queGira transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
-                    <a href="{{route('organization')}}">Programar encuentro</a>
+                    <a href="{{route('organization')}}">Programar</a>
                 </li>
             </ul>
         </nav>
@@ -53,5 +53,9 @@
     <main>
        @yield('content')
     </main>
+    <footer class="py-8 mx-auto">
+        <small>
+            &copy; by JcSomeCodes</footer>
+        </small> 
 </body>
 </html>
