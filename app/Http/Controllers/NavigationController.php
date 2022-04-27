@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class NavigationController extends Controller
@@ -9,27 +10,33 @@ class NavigationController extends Controller
 
 
     public function clasification(){
-        return view('clasification');
+        $teams = Team::all();
+        return view('clasification', compact('teams'));
     }
 
     public function register(){
-        return view('register');
+        $teams = Team::all();
+        return view('register', compact('teams'));
     }
 
     public function calendar(){
-        return view('calendar');
+        $teams = Team::all();
+        return view('calendar', compact('teams'));
     }
    
     public function result(){
-        return view('result');
+        $teams = Team::all();
+        return view('result', compact('teams'));
     }
     
     public function show(){
-        
-        return view('show');
+        $teams = Team::all();
+        return view('show', compact('teams'));
     }
 
     public function delete(){
-        return view('delete');
+        $teams = Team::paginate();
+        //return $teams;
+        return view('delete', compact('teams'));
     }
 }

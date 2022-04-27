@@ -40,8 +40,11 @@
                 <li class="cursor-pointer transition-all duration-150 ease-in-out inline ml-4">
                     <a class="textoCabecera text-lg hover:text-yellow-900" href="/clasification"> Clasificación</a>
                 </li>
-                <li class="cursor-pointer transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
-                    <a href="/register"> Nuevo Equipo</a>
+                <li class="cursor-pointer queGira transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
+                    <a href="/register">Nuevo Equipo</a>
+                </li>
+                <li class="cursor-pointer queGira transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
+                    <a href="/register">Programar encuentro</a>
                 </li>
             </ul>
         </nav>

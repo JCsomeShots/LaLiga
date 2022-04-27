@@ -7,7 +7,7 @@ body {
     font-size: 10px;
     background: url("./img/pelotaGraducacio.png");
 }
-h1 , h2 {
+h1 {
     font-family: 'Square Peg', cursive;
 }
 .cabecera  {
@@ -32,7 +32,7 @@ h1 , h2 {
     animation: swing 1s ease;
     animation-iteration-count: 1;
 }
-li:hover  {
+.queGira:hover  {
     transform: rotateZ(-20deg);
 }
 .submit:hover {
