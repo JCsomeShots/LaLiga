@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td class="txt py-3 pr-6 font-base pl-4 ">1</th>
-                <td class="txt equipo py-3 pr-6 font-base text-left"><a href="/show"> Madrid</a></th>
+                <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show')}}"> Madrid</a></th>
                 <td class="txt py-3 pr-6 pl-8 font-base puntos">3</th>
                 <td class="txt py-3 pr-6 pl-8 font-base mx-auto">1</th>
                 <td class="txt py-3 pr-6 pl-8 font-base mx-auto">1</th>
@@ -27,7 +27,7 @@
             </tr>
             <tr class="">
                 <td class="txt py-3 pr-6 font-base pl-4 ">2</th>
-                <td class="txt equipo py-3 pr-6 font-base text-left"><a href="/show">Barcelona</a></th>
+                <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show')}}">Barcelona</a></th>
                 <td class="txt py-3 pr-6 pl-8 font-base puntos">0</th>
                 <td class="txt py-3 pr-6 pl-8 font-base ">1</th>
                 <td class="txt py-3 pr-6 pl-8 font-base ">0</th>

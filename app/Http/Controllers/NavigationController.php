@@ -33,6 +33,15 @@ class NavigationController extends Controller
         $teams = Team::all();
         return view('show', compact('teams'));
     }
+    public function show2($id){
+        $team = Team::find($id);
+        return view('show2', compact('team'));
+    }
+
+    public function organization(){
+        $teams = Team::all();
+        return view('organization', compact('teams'));
+    }
 
     public function delete(){
         $teams = Team::paginate();
