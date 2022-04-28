@@ -27,7 +27,6 @@
                 <option value="-2"> menos de 2</option>
                 <option value="-5"> menos de 5 </option>
                 <option value="+5"> más de 5</option>
-                {{-- <option value="max"> más 10 años</option> --}}
             </select>
         </div>
 

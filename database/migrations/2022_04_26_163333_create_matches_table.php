@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('local')->references('id')->on('teams');
             $table->foreignId('visitante')->references('id')->on('teams');
-            $table->enum('estado',['terminado','en ejecución'])->default('en ejecución');
+            $table->enum('estado',['terminado','ejecucio','programado'])->default('programado');
             $table->timestamps();
         });
     }

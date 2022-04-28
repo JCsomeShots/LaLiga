@@ -59,6 +59,16 @@ class NavigationController extends Controller
         $team->save();
         return redirect()->route('show2', $team->id);
     }
+    public function organizationStore(Request $request){
+        return $request->all();
+        // $team = new Team();
+        // $team->name = $request->name;
+        // $team->slogan = $request->slogan;
+        // $team->creation = $request->creation;
+        // //return $team;
+        // $team->save();
+        // return redirect()->route('show2', $team->id);
+    }
 
 
 }

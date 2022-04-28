@@ -6,10 +6,6 @@
 
         
 <section>
-   <h3>Bienvenido al curso : {{$team->name}}</h3>
-   <h3>slogan : {{$team->slogan}}</h3>
-   <h3>creación : {{$team->creation}}</h3>
-   <a href="{{route('delete')}}">Volver a la clasificación</a>
 
     
 </section>

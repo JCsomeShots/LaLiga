@@ -21,7 +21,7 @@
     <header class=" cabecera flex flex-col justify-center ">
 
         <div class="titulo mx-auto my-8 flex items-center">
-            <h1 class="text-6xl textoCabecera  -skew-y-6">La Liga de Campiones</h1>
+            <h1 class="text-6xl textoCabecera  -skew-y-6">La Liga de Campeones</h1>
             <figure>
                 <img src=" {{ asset('img/pelotaNaranja.png') }}" alt="pelotaDiseny" class="w-14 animate-pulse ml-7">
             </figure>

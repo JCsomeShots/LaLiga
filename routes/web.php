@@ -36,3 +36,5 @@ Route::get('/organization', [NavigationController::class, 'organization'])->name
 Route::get('/show2{id}', [NavigationController::class, 'show2'])->name('show2');
 
 Route::post('teams', [NavigationController::class, 'store'])->name('teams.store');
+
+Route::post('organizationStore', [NavigationController::class, 'organizationStore'])->name('organization.store');
