@@ -55,6 +55,16 @@
            
         </table>
     </div>
+    <div class="txt flex justify-center mt-2">
+        <p class="text-xs mr-3"><small>Si quieres dar de baja a un equipo</small></p>
+        <a href="{{route('delete')}}" class="txt pincha align-text-bottom mr-2 flex items-end">
+            <small>pincha aquí</small>
+            <figure>
+                <img src="{{ asset('img/pelotaNaranja.png') }}" alt="pelotaDiseny" class="w-4 pelota ml-2 ease-in-out">
+            </figure>
+        </a>
+        <p class="text-xs mr-3"><small>... por qué te vas?</small></p>
+    </div>
     
     
 </section>

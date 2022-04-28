@@ -26,7 +26,7 @@
             <select name="creation" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
                 <option value="-2"> menos de 2</option>
                 <option value="-5"> menos de 5 </option>
-                <option value="max10"> más de 5</option>
+                <option value="+5"> más de 5</option>
                 {{-- <option value="max"> más 10 años</option> --}}
             </select>
         </div>

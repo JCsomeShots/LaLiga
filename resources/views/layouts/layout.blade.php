@@ -53,8 +53,8 @@
     <main>
        @yield('content')
     </main>
-    <footer class="py-8 mx-auto">
-        <small>
+    <footer class="my-8 mx-auto flex justify-center w-48 rounded">
+        <small class="txt">
             &copy; by JcSomeCodes</footer>
         </small> 
 </body>

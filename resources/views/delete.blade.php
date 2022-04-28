@@ -14,7 +14,7 @@
                     <li><a href="{{route('show2',$team->id)}}">{{$team->name}}</a></li>
                 @endforeach
             </ul>
-            {{$teams->links()}}
+            {{-- {{$teams->links()}} --}}
         </section>
 @endsection
 
