@@ -17,10 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slogan')->unique()->nullable();
-            //$table->date('date_creation')->nullable();
             $table->enum('creation', ['menos de 2', 'menos de 5', 'más de 5']);
-            // ->default('-2');
             $table->timestamps();
+            
         });
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partidos;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -29,10 +30,10 @@ class NavigationController extends Controller
         return view('result', compact('teams'));
     }
     
-    public function show($id){
-        $team = Team::find($id);
-        return view('show', compact('team'));
-    }
+    // public function show($id){
+    //     $team = Team::find($id);
+    //     return view('show', compact('team'));
+    // }
     public function show2($id){
         $team = Team::find($id);
         return view('show2', compact('team'));
@@ -60,14 +61,15 @@ class NavigationController extends Controller
         return redirect()->route('show2', $team->id);
     }
     public function organizationStore(Request $request){
-        return $request->all();
-        // $team = new Team();
-        // $team->name = $request->name;
-        // $team->slogan = $request->slogan;
-        // $team->creation = $request->creation;
-        // //return $team;
-        // $team->save();
-        // return redirect()->route('show2', $team->id);
+        //return $request->all();
+        $partido = new Partidos();
+        $partido->nameLocal = $request->nameLocal;
+        $partido->nameVisitor = $request->nameVisitor;
+        $partido->status = $request->status;
+        $partido->fecha = $request->fecha;
+        $partido->save();
+        return $partido;
+
     }
 
 
