@@ -63,12 +63,13 @@ class NavigationController extends Controller
     public function organizationStore(Request $request){
         //return $request->all();
         $partido = new Partidos();
-        $partido->nameLocal = $request->nameLocal;
-        $partido->nameVisitor = $request->nameVisitor;
+
+        $partido->nameLocal_id = $request->nameLocal;
+        $partido->nameVisitor_id = $request->nameVisitor;
         $partido->status = $request->status;
         $partido->fecha = $request->fecha;
-        $partido->save();
-        return $partido;
+         $partido->save();
+        // return $partido;
 
     }
 

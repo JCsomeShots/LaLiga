@@ -16,7 +16,7 @@
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo local </label>
             <select name="nameLocal" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
                 @foreach ($teams as $team)
-                <option value="{{$team->name}}">{{ $team->name}}</option>
+                <option value="{{$team->id}}">{{ $team->name}}</option>
                 @endforeach
             </select>
         </div>
@@ -25,8 +25,7 @@
             <label for="nombreEquipo" class="mr-5 ">Nombre del equipo visitante &nbsp;</label>
             <select name="nameVisitor" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
                 @foreach ($teams as $team)
-                {{-- {{if ($team->id < 2) continue}} --}}
-                <option value="{{$team->name}}">{{$team->name}}</option>
+                <option value="{{$team->id}}">{{$team->name}}</option>
                 @endforeach
             </select>
         </div>
