@@ -21,13 +21,18 @@ class NavigationController extends Controller
     }
 
     public function calendar(){
-        $teams = Team::all();
-        return view('calendar', compact('teams'));
+        // $teams = Team::all();
+        // return view('calendar', compact('teams'));
+        $partidos = Partidos::all();
+        // return $partido;
+        return view('calendar', compact('partidos'));
     }
    
     public function result(){
-        $teams = Team::all();
-        return view('result', compact('teams'));
+        // $partido = Partidos::find($id);
+        $partidos = Partidos::all();
+        return view('calendar', compact('partido'));
+        // return $partido;
     }
     
     // public function show($id){
@@ -70,6 +75,8 @@ class NavigationController extends Controller
         $partido->fecha = $request->fecha;
          $partido->save();
         // return $partido;
+        return redirect()->route('calendar', $partido->id);
+
 
     }
 

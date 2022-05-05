@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
 
             //$table->unsignedInteger('nameLocal_id');
-            $table->foreignId('nameLocal_id')->references('id')->on('teams');
+            $table->string('nameLocal_id')->references('id')->on('teams');
 
             //$table->unsignedInteger('nameVisitor_id');
-            $table->foreignId('nameVisitor_id')->references('id')->on('teams');
+            $table->string('nameVisitor_id')->references('id')->on('teams');
 
             // $table->foreignId('nameVisitor')->references('id')->on('teams');
             //$table->string('nameVisitor')->references('name')->on('teams');

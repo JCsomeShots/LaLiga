@@ -24,7 +24,7 @@
                 <td class="txt py-3 font-base pl-4 ">Antiguedad</th>
                     <td class="txt pl-3 font-base text-left">{{$team->creation}}</th>
             </tr>
-            <tr>
+            {{-- <tr>
                 <td class="txt py-3 font-base pl-4 ">Puesto en la clasificación</th>
                 <td class="txt pl-3 font-base text-left"> # 1</th>
             </tr>
@@ -47,7 +47,7 @@
             <tr>
                 <td class="txt py-3 font-base pl-4 ">Partidos perdidos</th>
                 <td class="txt pl-3 font-base text-left">0</th>
-            </tr>
+            </tr> --}}
            
         </table>
     </div>

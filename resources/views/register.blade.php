@@ -24,9 +24,9 @@
         <div class="flex flex-row justify-center items-center space-x-6 mt-2">
             <label for="antiguedad">Antigüedad del equipo:</label>
             <select name="creation" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
-                <option value="-2"> menos de 2</option>
-                <option value="-5"> menos de 5 </option>
-                <option value="+5"> más de 5</option>
+                <option value="menos de 2"> menos de 2</option>
+                <option value="menos de 5"> menos de 5 </option>
+                <option value="más de 5"> más de 5</option>
             </select>
         </div>
 
