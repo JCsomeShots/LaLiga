@@ -19,16 +19,13 @@ h1 {
 .tabla {
     border-color: #fd7702;
 }
-.tabla {
+.tabla , .mismoEquipo , .puntos , footer {
     background-color: #002347;
 }
 .explicacio  {
     color: #ff5003;
 }
-.puntos , footer{
-    background-color: #002347;
-}
-.equipo:hover , .pincha:hover {
+.equipo:hover , .pincha:hover , .mismoEquipo {
     animation: swing 1s ease;
     animation-iteration-count: 1;
 }
@@ -37,6 +34,9 @@ h1 {
 }
 .submit:hover {
     transform: scale(0.8);
+}
+.byJC:hover {
+    transform: scale(1.1);
 }
 
 @keyframes spinner3 {

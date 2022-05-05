@@ -27,14 +27,22 @@ Route::get('/calendar', [NavigationController::class, 'calendar'])->name('calend
 
 Route::get('/result', [NavigationController::class, 'result'])->name('result');
 
-Route::get('/show', [NavigationController::class, 'show'])->name('show');
+Route::get('/showPartido{id}', [NavigationController::class, 'showPartido'])->name('showPartido');
 
 Route::get('/delete', [NavigationController::class, 'delete'])->name('delete');
 
 Route::get('/organization', [NavigationController::class, 'organization'])->name('organization');
 
-Route::get('/show2{id}', [NavigationController::class, 'show2'])->name('show2');
+Route::get('/showTeam{id}', [NavigationController::class, 'showTeam'])->name('showTeam');
 
 Route::post('teams', [NavigationController::class, 'store'])->name('teams.store');
 
 Route::post('organizationStore', [NavigationController::class, 'organizationStore'])->name('organization.store');
+
+Route::get('mismoEquipo', [NavigationController::class, 'mismoEquipo'])->name('mismoEquipo');
+
+Route::get('/showPartido{partido}/edit', [NavigationController::class, 'partidosEdit'])->name('partidosEdit');
+
+Route::get('/showTeam{team}/edit', [NavigationController::class, 'teamEdit'])->name('teamEdit');
+
+Route::get('/showTeam{team}/edit', [NavigationController::class, 'teamEdit2'])->name('teamEdit2');

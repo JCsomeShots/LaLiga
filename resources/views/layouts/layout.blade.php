@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://cdn.tailwindcss.com"></script>
 
     <title>@yield('title')</title>
@@ -31,20 +32,20 @@
 
         <nav class="flex-none mx-16 my-5">
             <ul >
-                <li class="cursor-pointer transition-all duration-150 ease-in-out inline txt">
+                {{-- <li class="cursor-pointer transition-all duration-150 ease-in-out inline txt">
                     <a class=" textoCabecera text-lg hover:text-yellow-900" href="{{route('result')}}"> Resultados</a>
-                </li>
-                <li class="cursor-pointer transition-all duration-150 ease-in-out inline ml-4">
+                </li> --}}
+                <li class="cursor-pointer transition-all duration-150 ease-in-out inline ml-4 ">
                     <a class=" textoCabecera text-lg hover:text-yellow-900" href="{{route('calendar')}}"> Calendario</a>
                 </li>
-                <li class="cursor-pointer transition-all duration-150 ease-in-out inline ml-4">
+                <li class="cursor-pointer transition-all duration-150 ease-in-out inline ml-8">
                     <a class="textoCabecera text-lg hover:text-yellow-900" href="{{route('clasification')}}"> Clasificación</a>
                 </li>
-                <li class="cursor-pointer queGira transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
-                    <a href="{{route('register')}}">Nuevo Equipo</a>
+                <li class="cursor-pointer transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
+                    <a class="textoCabecera text-lg hover:text-yellow-900" href="{{route('register')}}">Nuevo Equipo</a>
                 </li>
-                <li class="cursor-pointer queGira transition-all duration-150 ease-in-out float-right mr-2 textoCabecera">
-                    <a href="{{route('organization')}}">Programar</a>
+                <li class="cursor-pointer transition-all duration-150 ease-in-out float-right mr-8 textoCabecera">
+                    <a class="textoCabecera text-lg hover:text-yellow-900" href="{{route('organization')}}">Programar</a>
                 </li>
             </ul>
         </nav>
@@ -53,9 +54,12 @@
     <main>
        @yield('content')
     </main>
-    <footer class="my-8 mx-auto flex justify-center w-3/4 py-2 rounded-xl">
-        <p class="txt"> 
-            &copy; by JcSomeCodes</footer>
-        </p> 
+    <footer class="absolute bottom-0  w-11/12 rounded-xl ml-12">
+        <div class=" mx-auto flex justify-center  py-2  ">
+            <p class="txt byJC"> 
+                &copy; by JcSomeCodes
+            </p> 
+        </div>
+    </footer>
 </body>
 </html>

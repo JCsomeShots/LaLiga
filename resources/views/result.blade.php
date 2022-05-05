@@ -29,30 +29,6 @@
                     <td class="txt pl-3 font-base text-left">{{$partido->fecha}}</th>
             </tr>
 
-            {{-- <tr>
-                <td class="txt py-3 font-base pl-4 ">Puesto en la clasificación</th>
-                <td class="txt pl-3 font-base text-left"> # 1</th>
-            </tr>
-            <tr>
-                <td class="txt py-3 font-base pl-4 ">Puntos</th>
-                <td class="txt pl-3 font-base text-left">3</th>
-            </tr>
-            <tr>
-                <td class="txt py-3 font-base pl-4 ">Partidos jugados</th>
-                <td class="txt pl-3 font-base text-left">1</th>
-            </tr>
-            <tr>
-                <td class="txt py-3 font-base pl-4 ">Partidos ganados</th>
-                <td class="txt pl-3 font-base text-left">1</th>
-            </tr>
-            <tr>
-                <td class="txt py-3 font-base pl-4 ">Partidos empatados</th>
-                <td class="txt pl-3 font-base text-left">0</th>
-            </tr>
-            <tr>
-                <td class="txt py-3 font-base pl-4 ">Partidos perdidos</th>
-                <td class="txt pl-3 font-base text-left">0</th>
-            </tr> --}}
            
         </table>
     </div>

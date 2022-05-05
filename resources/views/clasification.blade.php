@@ -22,15 +22,15 @@
             
 @foreach ($teams as $team)
 <tr>
-    <td class="txt py-3 pr-6 font-base pl-4 ">1</th>
-    <td class="txt equipo py-3 pr-6 font-base text-left"><a href="{{route('show2',$team->id)}}"> {{$team->name}}</a></th>
-    <td class="txt py-3 pr-6 pl-8 font-base puntos">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
-    <td class="txt py-3 pr-6 pl-8 font-base mx-auto">0</th>
+    <td class="txt py-3 pr-6 font-thin pl-4 ">{{$team->id}}</th>
+    <td class="txt equipo py-3 pr-6 font-thin text-left"><a href="{{route('showTeam',$team->id)}}"> {{$team->name}}</a></th>
+    <td class="txt py-3 pr-6 pl-8 font-thin puntos">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
+    <td class="txt py-3 pr-6 pl-8 font-thin mx-auto">0</th>
 </tr>
 
 @endforeach

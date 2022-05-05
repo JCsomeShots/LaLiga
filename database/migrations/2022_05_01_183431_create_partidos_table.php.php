@@ -17,13 +17,11 @@ return new class extends Migration
             $table->id();
 
             //$table->unsignedInteger('nameLocal_id');
-            $table->string('nameLocal_id')->references('id')->on('teams');
+            $table->string('nameLocal')->references('id')->on('teams');
 
             //$table->unsignedInteger('nameVisitor_id');
-            $table->string('nameVisitor_id')->references('id')->on('teams');
+            $table->string('nameVisitor')->references('id')->on('teams');
 
-            // $table->foreignId('nameVisitor')->references('id')->on('teams');
-            //$table->string('nameVisitor')->references('name')->on('teams');
             $table->enum('status',['terminado','ejecucio','programado'])->default('programado');
             $table->string('fecha');
             $table->timestamps();

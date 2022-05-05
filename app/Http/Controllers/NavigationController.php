@@ -11,7 +11,7 @@ class NavigationController extends Controller
 
 
     public function clasification(){
-        $teams = Team::all();
+        $teams = Team::all()->sortBy('id');
         return view('clasification', compact('teams'));
     }
 
@@ -21,10 +21,7 @@ class NavigationController extends Controller
     }
 
     public function calendar(){
-        // $teams = Team::all();
-        // return view('calendar', compact('teams'));
         $partidos = Partidos::all();
-        // return $partido;
         return view('calendar', compact('partidos'));
     }
    
@@ -34,14 +31,13 @@ class NavigationController extends Controller
         return view('calendar', compact('partido'));
         // return $partido;
     }
-    
-    // public function show($id){
-    //     $team = Team::find($id);
-    //     return view('show', compact('team'));
-    // }
-    public function show2($id){
+    public function showPartido($id){
+        $partido = Partidos::find($id);
+        return view('showPartido', compact('partido'));
+    }
+    public function showTeam($id){
         $team = Team::find($id);
-        return view('show2', compact('team'));
+        return view('showTeam', compact('team'));
     }
 
     public function organization(){
@@ -63,21 +59,35 @@ class NavigationController extends Controller
         $team->creation = $request->creation;
         //return $team;
         $team->save();
-        return redirect()->route('show2', $team->id);
+        return redirect()->route('showTeam', $team->id);
     }
     public function organizationStore(Request $request){
         //return $request->all();
+        if($request->nameLocal == $request->nameVisitor){
+            return redirect()->route('mismoEquipo');
+        }
         $partido = new Partidos();
-
-        $partido->nameLocal_id = $request->nameLocal;
-        $partido->nameVisitor_id = $request->nameVisitor;
+        $partido->nameLocal = $request->nameLocal;
+        $partido->nameVisitor = $request->nameVisitor;
         $partido->status = $request->status;
         $partido->fecha = $request->fecha;
          $partido->save();
         // return $partido;
         return redirect()->route('calendar', $partido->id);
+    }
 
+    public function mismoEquipo(){
+        return view('mismoEquipo');
+    }
 
+    public function partidosEdit( Partidos $partido){
+        // $partido = Partidos::find($id);
+        // return $partido;
+        return view('partidoEdit', compact('partido'));
+    }
+    
+    public function teamEdit2(Team $team){
+        return view('teamEdit2', compact('team'));
     }
 
 
