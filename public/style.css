@@ -38,7 +38,9 @@ h1 {
 .byJC:hover {
     transform: scale(1.1);
 }
-
+.blanco {
+    color: aliceblue;
+}
 @keyframes spinner3 {
 to {
 transform: rotate(270deg);

@@ -18,7 +18,7 @@
 
     <title>@yield('title')</title>
 </head>
-<body>
+<body style="background-image: url({{ asset('img/pelotaBg.jpeg') }})" class="bg-no-repeat bg-top bg-cover">
     <header class=" cabecera flex flex-col justify-center ">
 
         <div class="titulo mx-auto my-8 flex items-center">
