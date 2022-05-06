@@ -9,18 +9,19 @@
 <section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
     <h2 class="txt mt-4 text-2xl tracking-wider">Quieres dar de alta a un nuevo equipo</h2>
 
-    <form action="{{route('teams.store')}}" method="post" class="flex flex-col  items-start my-9">
+    <form action="{{route('updateTeam', $team)}}" method="post" class="flex flex-col  items-start my-9">
 
         @csrf
+        @method('put')
 
         <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo</label>
-            <input type="text" id="nombreEquipo" name="name" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md">
+            <input type="text" id="nombreEquipo" name="name" size="40" class="pl-2 ml-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->name}}">
         </div>
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="sloganEquipo" class="mr-12 ">Slogan del equipo</label>
-            <input type="text" id="sloganEquipo" name="slogan" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md">
+            <input type="text" id="sloganEquipo" name="slogan" size="40" class="pl-2 ml-3 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->slogan}}">
         </div>
 
         <div class="flex flex-row justify-center items-center space-x-6 mt-2">
@@ -32,7 +33,7 @@
             </select>
         </div>
 
-        <input type="submit" value="Registra" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
+        <input type="submit" value="Edita este equipo" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
         
     </form>
 

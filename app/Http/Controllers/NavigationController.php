@@ -88,5 +88,18 @@ class NavigationController extends Controller
         return view('teamEdit', compact('team'));
     }
 
+    public function updateTeam(Request $request ,Team $team){
+        // return $request->all();
+        $team->name = $request->name;
+        $team->slogan = $request->slogan;
+        $team->creation = $request->creation;
+        // return $team;
+        $team->save();
+        return redirect()->route('showTeam', $team->id);
+    }
+    public function updatePartido(Request $request ,Partidos $partidos){
+        // return $partidos;
+        return $request->all();
+    }
 
 }

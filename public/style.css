@@ -41,6 +41,9 @@ h1 {
 .blanco {
     color: aliceblue;
 }
+.pelota {
+    background-color: aliceblue;
+}
 @keyframes spinner3 {
 to {
 transform: rotate(270deg);
