@@ -1,11 +1,13 @@
 @extends('layouts.layout')
 
-@section('title', 'TeamEdit')
+@section('title', 'register')
 
 @section('content')
-
+<section>
+    {{$team}}
+</section>
 <section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
-    <h2 class="txt mt-4 text-2xl tracking-wider">Quieres editar el contenido de este equipo</h2>
+    <h2 class="txt mt-4 text-2xl tracking-wider">Quieres dar de alta a un nuevo equipo</h2>
 
     <form action="{{route('teams.store')}}" method="post" class="flex flex-col  items-start my-9">
 
@@ -30,7 +32,7 @@
             </select>
         </div>
 
-        <input type="submit" value="Actualizar" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
+        <input type="submit" value="Registra" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
         
     </form>
 

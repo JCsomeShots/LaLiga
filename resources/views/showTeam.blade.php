@@ -1,14 +1,10 @@
 @extends('layouts.layout')
 
-@section('title', 'show '.$team->name)
+@section('title', 'organization')
 
 @section('content')
 
-        
-<section>
-
-    
-</section>
+ 
 <section class="laTabla">
     <div class="cabeceraTabla flex justify-center items-center">
         <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
@@ -26,7 +22,7 @@
             </tr>
             <tr>
                 <td class="txt py-3 font-base px-4 ">Modificar</th>
-                        <td class="txt py-3 pl-3 font-light cursor-pointer hover:text-yellow-900"><a class="fa fa-cogs" href="{{route('teamEdit2' , $team)}}"></a></td>
+                        <td class="txt py-3 pl-3 font-light cursor-pointer hover:text-yellow-900"><a class="fa fa-cogs" href="{{route('teamEdit' , $team)}}"></a></td>
             </tr>
            
         </table>
@@ -44,6 +40,7 @@
     
     
 </section>
+
 @endsection
 
 

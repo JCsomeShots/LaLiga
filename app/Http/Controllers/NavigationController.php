@@ -26,10 +26,7 @@ class NavigationController extends Controller
     }
    
     public function result(){
-        // $partido = Partidos::find($id);
-        $partidos = Partidos::all();
-        return view('calendar', compact('partido'));
-        // return $partido;
+
     }
     public function showPartido($id){
         $partido = Partidos::find($id);
@@ -45,10 +42,11 @@ class NavigationController extends Controller
         return view('organization', compact('teams'));
     }
 
-    public function delete(){
-        $teams = Team::all();
-        //return $teams;
-        return view('delete', compact('teams'));
+    public function delete(Team $team){
+        // $teams = Team::all();
+        // return $teams;
+        // return view('delete', compact('teams'));
+
     }
 
     public function store(Request $request){
@@ -80,14 +78,14 @@ class NavigationController extends Controller
         return view('mismoEquipo');
     }
 
-    public function partidosEdit( Partidos $partido){
+    public function partidosEdit( Partidos $partidos){
         // $partido = Partidos::find($id);
         // return $partido;
-        return view('partidoEdit', compact('partido'));
+        return view('partidoEdit', compact('partidos'));
     }
     
-    public function teamEdit2(Team $team){
-        return view('teamEdit2', compact('team'));
+    public function teamEdit(Team $team){
+        return view('teamEdit', compact('team'));
     }
 
 

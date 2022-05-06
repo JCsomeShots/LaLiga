@@ -4,8 +4,11 @@
 
 @section('content')
 
-       
-<section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
+<section>
+    {{$partidos}}
+   
+</section>
+{{-- <section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
     <h2 class="txt mt-4 text-2xl tracking-wider">Quieres programar un nuevo partido</h2>
 
     <form action="{{route('organization.store')}}" method="post" class="flex flex-col  items-start my-9">
@@ -15,7 +18,7 @@
         <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo local </label>
             <select name="nameLocal" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
-                @foreach ($teams as $team)
+                @foreach ($partidos as $partido)
                 <option value="{{$team->name}}">{{ $team->name}}</option>
                 @endforeach
             </select>
@@ -49,6 +52,6 @@
     </form>
 
    
-</section>
+</section> --}}
 @endsection
 

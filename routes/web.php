@@ -15,7 +15,7 @@ use App\Http\Controllers\NavigationController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('register');
 });
 
 
@@ -41,8 +41,8 @@ Route::post('organizationStore', [NavigationController::class, 'organizationStor
 
 Route::get('mismoEquipo', [NavigationController::class, 'mismoEquipo'])->name('mismoEquipo');
 
-Route::get('/showPartido{partido}/edit', [NavigationController::class, 'partidosEdit'])->name('partidosEdit');
+Route::get('/showPartido{partidos}/edit', [NavigationController::class, 'partidosEdit'])->name('partidosEdit');
+
+
 
 Route::get('/showTeam{team}/edit', [NavigationController::class, 'teamEdit'])->name('teamEdit');
-
-Route::get('/showTeam{team}/edit', [NavigationController::class, 'teamEdit2'])->name('teamEdit2');
