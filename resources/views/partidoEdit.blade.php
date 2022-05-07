@@ -5,25 +5,25 @@
 @section('content')
 
 <section>
-    {{$partidos}}
+    {{-- {{$partidos}} --}}
    
 </section>
 <section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
     <h2 class="txt mt-4 text-2xl tracking-wider">Quieres programar un nuevo partido</h2>
 
-    <form action="{{route('updatePartido'), $partido}}" method="post" class="flex flex-col  items-start my-9">
+    <form action="{{route('updatePartido', $partidos)}}" method="post" class="flex flex-col  items-start my-9">
 
         @csrf
         @method('put')
 
-        {{-- <div class="flex flex-row justify-center items-center">
+        <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo local </label>
             <select name="nameLocal" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
                 @foreach ($partidos as $partido)
-                <option value="{{$partido->name}}">{{ $partido->name}}</option>
+                <option value="{{$partidos->name}}">{{ $partidos->name}}</option>
                 @endforeach
             </select>
-        </div> --}}
+        </div>
 
         {{-- <div class="flex flex-row justify-center items-center mt-2">
             <label for="nombreEquipo" class="mr-5 ">Nombre del equipo visitante &nbsp;</label>
