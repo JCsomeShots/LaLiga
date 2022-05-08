@@ -22,7 +22,7 @@ return new class extends Migration
             //$table->unsignedInteger('nameVisitor_id');
             $table->string('nameVisitor')->references('id')->on('teams');
 
-            $table->enum('status',['terminado','ejecucio','programado'])->default('programado');
+            $table->enum('status',['terminado','ejecucion','programado'])->default('programado');
             $table->string('fecha');
             $table->string('hora');
             $table->timestamps();

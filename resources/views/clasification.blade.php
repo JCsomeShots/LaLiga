@@ -6,7 +6,7 @@
 
 <section class="laTabla">
 
-    <div class="flex justify-center mt-8 text-lg"><p class="txt"> Si deseas más información clica sobre un equipo</p></div>
+    <div class="flex justify-center mt-8 text-lg"><p class="blanco"> Si deseas más información clica sobre un equipo</p></div>
 
     <div class="cabeceraTabla flex justify-center items-center">
         <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">

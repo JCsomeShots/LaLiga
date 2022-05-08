@@ -62,24 +62,25 @@
 
         </div>
 
-        <div class="flex">
-               
-            <form action="{{route('destroyPartido' , $partido)}}" method="POST">
-
-            @csrf
-            @method('delete')
-                    <button type="submit" class="txt py-3 px-6 pr-3 pl-4 font-light cursor-pointer hover:text-yellow-900">
-                        <i class="fa fa-trash-o mt-4 cursor-pointer hover:text-yellow-900" style="font-size:30px"></i>
-
-                    </button>
-
-
-            </form>
-        </div>
+        
 
         <input type="submit" value="Edita el encuentro" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
         
     </form>
+    <div class="flex">
+               
+        <form action="{{route('destroyPartido' , $partido)}}" method="POST">
+
+        @csrf
+        @method('delete')
+                <button type="submit" class="txt py-3 px-6 pr-3 pl-4 font-light cursor-pointer hover:text-yellow-900">
+                    <i class="fa fa-trash-o mt-4 cursor-pointer hover:text-yellow-900" style="font-size:30px"></i>
+
+                </button>
+
+
+        </form>
+    </div>
 
    
 </section>
