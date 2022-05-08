@@ -65,6 +65,12 @@ class NavigationController extends Controller
         if($request->nameLocal == $request->nameVisitor){
             return redirect()->route('mismoEquipo');
         }
+        
+        $request->validate([
+            'fecha' => 'required',
+            'hora' => 'required',
+        ]);
+
         $partido = new Partidos();
         $partido->nameLocal = $request->nameLocal;
         $partido->nameVisitor = $request->nameVisitor;
@@ -99,7 +105,7 @@ class NavigationController extends Controller
             'creation' => 'required',
             'club' => 'required'
         ]);
-        
+
         $team->name = $request->name;
         $team->slogan = $request->slogan;
         $team->creation = $request->creation;
@@ -110,6 +116,12 @@ class NavigationController extends Controller
     }
     public function updatePartido(Request $request ,Partidos $partido){
         //  return $request->all();
+
+        $request->validate([
+            'fecha' => 'required',
+            'hora' => 'required',
+        ]);
+
         $partido->nameLocal = $request->nameLocal;
         $partido->nameVisitor = $request->nameVisitor;
         $partido->status = $request->status;

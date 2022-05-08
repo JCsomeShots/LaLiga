@@ -41,12 +41,22 @@
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="fecha" class="mr-20">Fecha del partido</label>
-            <input type="date" name="fecha" value="2022-05-16" size="40" class="pl-4 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+            <input type="date" name="fecha"  size="40" class="pl-4 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" >
+            @error('fecha')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="hora" class="mr-20">Hora del partido</label>
-            <input type="time" id="hora" name="hora" value="21:25" size="40" class="pl-4 ml-1 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+            <input type="time" id="hora" name="hora"  size="40" class="pl-4 ml-1 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" >
+            @error('hora')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
 
         <input type="submit" value="Registra" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">

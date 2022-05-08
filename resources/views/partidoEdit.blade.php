@@ -42,11 +42,24 @@
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="fecha" class="mr-20">Fecha del partido</label>
             <input type="date" name="fecha" value="{{$partido->fecha}}" size="40" class="pl-2 ml-5 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+
+            @error('fecha')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
         
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="hora" class="mr-20">Hora del partido</label>
             <input type="time" name="hora" value="{{$partido->hora}}" size="40" class="pl-2 ml-7 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+
+            @error('hora')
+            <br>
+            <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+            <br>
+        @enderror
+
         </div>
 
         <div class="flex">
