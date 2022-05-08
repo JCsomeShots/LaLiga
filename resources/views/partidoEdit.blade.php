@@ -9,36 +9,31 @@
    
 </section>
 <section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
-    <h2 class="txt mt-4 text-2xl tracking-wider">Quieres programar un nuevo partido</h2>
+    <h2 class="txt mt-4 text-2xl tracking-wider">Quieres modificar un partido ya programado</h2>
+    <h3 class="mt-2">Los equipos competidores no podrán modificarse, para tal caso deberás eliminar y volver a crear el encuentro</h3>
 
-    <form action="{{route('updatePartido', $partidos)}}" method="post" class="flex flex-col  items-start my-9">
+    <form action="{{route('updatePartido', $partido)}}" method="post" class="flex flex-col  items-start my-9">
 
         @csrf
         @method('put')
 
         <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo local </label>
-            <select name="nameLocal" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
-                @foreach ($partidos as $partido)
-                <option value="{{$partidos->name}}">{{ $partidos->name}}</option>
-                @endforeach
-            </select>
+
+            <input class="pl-3 rounded ml-3" type="text" size="50" name="nameLocal" readonly value="{{$partido->nameLocal}}">
         </div>
 
-        {{-- <div class="flex flex-row justify-center items-center mt-2">
+        <div class="flex flex-row justify-center items-center mt-2">
             <label for="nombreEquipo" class="mr-5 ">Nombre del equipo visitante &nbsp;</label>
-            <select name="nameVisitor" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5">
-                @foreach ($teams as $team)
-                <option value="{{$team->name}}">{{$team->name}}</option>
-                @endforeach
-            </select>
-        </div> --}}
+            <input size="50" class="pl-3 rounded" type="text" name="nameVisitor" readonly value="{{$partido->nameVisitor}}">
+           
+        </div>
 
         <div class="flex flex-row justify-center items-center space-x-6 mt-2">
-            <label for="antiguedad" class="mr-12">Estado del evento &nbsp;</label>
-            <select name="status" id="antiguedad" class="rounded px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5 " value ="{{$partidos->status}}">
+            <label for="antiguedad" class="mr-16">Estado del evento &nbsp;</label>
+            <select name="status" id="antiguedad" class="rounded  px-3 focus:border-yellow-900 focus:outline-none focus:shadow-md py-0.5" value ="{{$partido->status}}">
 
-                <option value="{{$partidos->status}}">Programado</option>
+                <option value="programado">Programado</option>
                 <option value="ejecucion">Ejecutándose</option>
                 <option value="terminado">Terminado</option>
             </select>
@@ -46,7 +41,17 @@
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="fecha" class="mr-20">Fecha del partido</label>
-            <input type="datetime-local" name="fecha" value="{{$partidos->fecha}}" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+            <input type="date" name="fecha" value="{{$partido->fecha}}" size="40" class="pl-2 ml-5 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+        </div>
+        
+        <div class="mt-2 flex flex-row justify-center items-center">
+            <label for="hora" class="mr-20">Hora del partido</label>
+            <input type="time" name="hora" value="{{$partido->hora}}" size="40" class="pl-2 ml-7 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" required>
+        </div>
+
+        <div class="flex">
+                <i class="fa fa-trash-o mt-4 cursor-pointer hover:text-yellow-900" style="font-size:30px"></i>
+            </p>
         </div>
 
         <input type="submit" value="Edita el encuentro" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">

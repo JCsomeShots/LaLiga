@@ -21,6 +21,7 @@ class TeamFactory extends Factory
         return [
             'name' => $this->faker->sentence(), 
             'slogan' => $this->faker->paragraph(),
+            'club' => $this->faker->sentence(), 
             'creation' => $this->faker->randomElement(['menos de 2', 'menos de 5', 'más de 5'])
         ];
     }

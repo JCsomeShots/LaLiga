@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class NavigationController extends Controller
 {
 
-
     public function clasification(){
         $teams = Team::all()->sortBy('id');
         return view('clasification', compact('teams'));
@@ -55,6 +54,7 @@ class NavigationController extends Controller
         $team->name = $request->name;
         $team->slogan = $request->slogan;
         $team->creation = $request->creation;
+        $team->club = $request->club;
         //return $team;
         $team->save();
         return redirect()->route('showTeam', $team->id);
@@ -69,7 +69,8 @@ class NavigationController extends Controller
         $partido->nameVisitor = $request->nameVisitor;
         $partido->status = $request->status;
         $partido->fecha = $request->fecha;
-         $partido->save();
+        $partido->hora = $request->hora;
+        $partido->save();
         // return $partido;
         return redirect()->route('calendar', $partido->id);
     }
@@ -78,10 +79,10 @@ class NavigationController extends Controller
         return view('mismoEquipo');
     }
 
-    public function partidosEdit( Partidos $partidos){
+    public function partidosEdit( Partidos $partido){
         // $partido = Partidos::find($id);
         // return $partido;
-        return view('partidoEdit', compact('partidos'));
+        return view('partidoEdit', compact('partido'));
     }
     
     public function teamEdit(Team $team){
@@ -93,13 +94,25 @@ class NavigationController extends Controller
         $team->name = $request->name;
         $team->slogan = $request->slogan;
         $team->creation = $request->creation;
+        $team->club = $request->club;
         // return $team;
         $team->save();
         return redirect()->route('showTeam', $team->id);
     }
-    public function updatePartido(Request $request ,Partidos $partidos){
-        // return $partidos;
-        return $request->all();
+    public function updatePartido(Request $request ,Partidos $partido){
+        //  return $request->all();
+        $partido->nameLocal = $request->nameLocal;
+        $partido->nameVisitor = $request->nameVisitor;
+        $partido->status = $request->status;
+        $partido->fecha = $request->fecha;
+        $partido->hora = $request->hora;
+        //return $partidos;
+        $partido->save();
+        return redirect()->route('calendar', $partido->id);
+    }
+
+    public function destroyPartido (Partidos $partido){ 
+        $partido->delete();
     }
 
 }

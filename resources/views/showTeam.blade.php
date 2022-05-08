@@ -17,9 +17,14 @@
                     <td class="txt pl-3 font-base text-left">{{$team->slogan}}</th>
             </tr>
             <tr>
+                <td class="txt py-3 font-base px-4 ">Entidad deportiva</th>
+                    <td class="txt pl-3 font-base text-left">{{$team->club}}</th>
+            </tr>
+            <tr>
                 <td class="txt py-3 font-base px-4 ">Antiguedad</th>
                     <td class="txt pl-3 font-base text-left">{{$team->creation}}</th>
             </tr>
+           
             <tr>
                 <td class="txt py-3 font-base px-4 ">Modificar</th>
                         <td class="txt py-3 pl-3 font-light cursor-pointer hover:text-yellow-900"><a class="fa fa-cogs" href="{{route('teamEdit' , $team)}}"></a></td>
@@ -29,13 +34,11 @@
     </div>
     <div class="blanco flex justify-center mt-2">
         <p class="text-xs mr-3"><small>Si quieres dar de baja a un equipo</small></p>
-        <a href="{{route('delete')}}" class="blanco pincha align-text-bottom mr-2 flex items-end">
-            <small>pincha aquí</small>
-            <figure>
-                <img src="{{ asset('img/pelotaNaranja.png') }}" alt="pelotaDiseny" class="w-4 pelota ml-2 ease-in-out blanco rounded-full">
-            </figure>
-        </a>
-        <p class="text-xs mr-3"><small>... por qué te vas?</small></p>
+        <form action="">
+            <small class="pincha blanco">pincha aquí</small>
+        </form>
+        
+        <p class="text-xs mr-3"><small>... por qué te vas? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small></p>
     </div>
     
     

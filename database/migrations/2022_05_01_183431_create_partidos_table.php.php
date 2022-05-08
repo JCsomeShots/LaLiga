@@ -24,6 +24,7 @@ return new class extends Migration
 
             $table->enum('status',['terminado','ejecucio','programado'])->default('programado');
             $table->string('fecha');
+            $table->string('hora');
             $table->timestamps();
         });
     }

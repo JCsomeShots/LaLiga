@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slogan')->unique()->nullable();
+            $table->string('club')->unique()->nullable();
             $table->enum('creation', ['menos de 2', 'menos de 5', 'más de 5']);
             $table->timestamps();
             

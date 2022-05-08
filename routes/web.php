@@ -41,10 +41,12 @@ Route::post('organizationStore', [NavigationController::class, 'organizationStor
 
 Route::get('mismoEquipo', [NavigationController::class, 'mismoEquipo'])->name('mismoEquipo');
 
-Route::get('/showPartido{partidos}/edit', [NavigationController::class, 'partidosEdit'])->name('partidosEdit');
+Route::get('/showPartido{partido}/edit', [NavigationController::class, 'partidosEdit'])->name('partidosEdit');
 
 Route::get('/showTeam{team}/edit', [NavigationController::class, 'teamEdit'])->name('teamEdit');
 
 Route::put('team/{team}', [NavigationController::class, 'updateTeam'])->name('updateTeam');
 
 Route::put('partido/{partido}', [NavigationController::class, 'updatePartido'])->name('updatePartido');
+
+Route::delete('partido/{partido}', [NavigationController::class, 'destroyPartido'])->name('destroyPartido');

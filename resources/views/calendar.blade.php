@@ -14,6 +14,7 @@
                 <th class="txt py-3 font-base  text-left">Equipo visitante</th>
                 <th class="text-left txt py-3 px-6 font-base puntos">Status del Partido</th>
                 <th class="text-left txt py-3 px-6 font-base puntos">Fecha del Partido</th>
+                <th class="text-left txt py-3 px-6 font-base puntos">Hora del Partido</th>
                 <th class="text-left txt py-3 px-6 font-base puntos">Dale un zoom</th>
                
             </tr>
@@ -26,6 +27,7 @@
 
                 <td class="txt py-3 px-6 font-light text-left"> {{$partido->status}}</td>
                 <td class="txt py-3 px-6 pr-3 font-light text-left"> {{$partido->fecha}}</td>
+                <td class="txt py-3 px-6 pr-3 font-light text-left"> {{$partido->hora}}</td>
                 <td class="txt py-3 px-6 pl-10 font-light cursor-pointer hover:text-yellow-900"><a href="{{route('showPartido',$partido->id)}}" class="fa fa-search"></a></td>
                 
             </tr>

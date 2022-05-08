@@ -17,24 +17,37 @@
                 <td class="txt pl-3 font-base text-left">{{$partido->nameLocal}}</td>
             </tr>
             <tr>
-                <td class="txt py-3 font-base pl-4 ">Equipo visitante</th>
+                <td class="txt py-3 font-base pl-4 ">Equipo visitante</td>
                     <td class="txt pl-3 font-base text-left">{{$partido->nameVisitor}}</td>
             </tr>
             <tr>
-                <td class="txt py-3 font-base pl-4 ">Fecha del partido</th>
+                <td class="txt py-3 font-base pl-4 ">Fecha del partido</td>
                     <td class="txt pl-3 font-base text-left">{{$partido->fecha}}</td>
             </tr>
             <tr>
-                <td class="txt py-3 font-base pl-4 ">Status del partido</th>
+                <td class="txt py-3 font-base pl-4 ">Hora del partido</td>
+                    <td class="txt pl-3 font-base text-left">{{$partido->hora}}</td>
+            </tr>
+            <tr>
+                <td class="txt py-3 font-base pl-4 ">Status del partido</td>
                     <td class="txt pl-3 font-base text-left">{{$partido->status}}</td>
             </tr>
             <tr>
-                <td class="txt py-3 font-base pl-4 ">Editar</th>
-                <td class="txt py-3 px-6 pr-3 pl-10 font-light cursor-pointer hover:text-yellow-900"><a href="{{route('partidosEdit' , $partido)}}" class="fa fa-cogs"></a></td>
+                <td class="txt py-3 font-base pl-4 ">Editar</td>
+                <td class="txt py-3 px-6 pr-3 pl-4 font-light cursor-pointer hover:text-yellow-900"><a href="{{route('partidosEdit' , $partido)}}" class="fa fa-cogs"></a></td>
             </tr>
             <tr>
-                <td class="txt py-3 font-base pl-4 ">Eliminar</th>
-                <td class="txt py-3 px-6 pr-3 pl-10 font-light cursor-pointer hover:text-yellow-900"><i class="fa fa-trash-o"></td>
+                <td class="txt py-3 font-base pl-4 ">Eliminar</td>
+                <form action="{{route('destroyPartido' , $partido)}}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="txt py-3 px-6 pr-3 pl-4 font-light cursor-pointer hover:text-yellow-900">
+                        eliminar
+
+                    </button>
+
+
+                </form>
             </tr>
            
         </table>
