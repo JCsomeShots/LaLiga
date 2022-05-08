@@ -41,15 +41,16 @@ class NavigationController extends Controller
         return view('organization', compact('teams'));
     }
 
-    public function delete(Team $team){
-        // $teams = Team::all();
-        // return $teams;
-        // return view('delete', compact('teams'));
-
-    }
-
     public function store(Request $request){
         // return $request->all();
+
+        $request->validate([
+            'name' => 'required',
+            'slogan' => 'required',
+            'creation' => 'required',
+            'club' => 'required'
+        ]);
+
         $team = new Team();
         $team->name = $request->name;
         $team->slogan = $request->slogan;
@@ -91,6 +92,14 @@ class NavigationController extends Controller
 
     public function updateTeam(Request $request ,Team $team){
         // return $request->all();
+
+        $request->validate([
+            'name' => 'required',
+            'slogan' => 'required',
+            'creation' => 'required',
+            'club' => 'required'
+        ]);
+        
         $team->name = $request->name;
         $team->slogan = $request->slogan;
         $team->creation = $request->creation;
@@ -109,10 +118,17 @@ class NavigationController extends Controller
         //return $partidos;
         $partido->save();
         return redirect()->route('calendar', $partido->id);
+        
     }
 
     public function destroyPartido (Partidos $partido){ 
         $partido->delete();
+        return redirect()->route('calendar', $partido->id);
+    }
+    
+    public function destroyTeam (Team $team){ 
+        $team->delete();
+        return redirect()->route('clasification');
     }
 
 }

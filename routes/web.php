@@ -29,8 +29,6 @@ Route::get('/result', [NavigationController::class, 'result'])->name('result');
 
 Route::get('/showPartido{id}', [NavigationController::class, 'showPartido'])->name('showPartido');
 
-Route::get('/delete', [NavigationController::class, 'delete'])->name('delete');
-
 Route::get('/organization', [NavigationController::class, 'organization'])->name('organization');
 
 Route::get('/showTeam{id}', [NavigationController::class, 'showTeam'])->name('showTeam');
@@ -50,3 +48,5 @@ Route::put('team/{team}', [NavigationController::class, 'updateTeam'])->name('up
 Route::put('partido/{partido}', [NavigationController::class, 'updatePartido'])->name('updatePartido');
 
 Route::delete('partido/{partido}', [NavigationController::class, 'destroyPartido'])->name('destroyPartido');
+
+Route::delete('team/{team}', [NavigationController::class, 'destroyTeam'])->name('destroyTeam');

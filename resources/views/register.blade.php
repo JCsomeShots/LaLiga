@@ -14,16 +14,34 @@
         <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" class="mr-11 ">Nombre del equipo</label>
             <input type="text" id="nombreEquipo" name="name" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md">
+
+            @error('name')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="sloganEquipo" class="mr-12 ">Slogan del equipo</label>
             <input type="text" id="sloganEquipo" name="slogan" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md">
+
+            @error('slogan')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="club" class="mr-12 ">Entidad deportiva </label>
             <input type="text" id="club" name="club" size="40" class="pl-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md">
+
+            @error('club')
+                <br>
+                <small>&nbsp;&nbsp;*&nbsp;{{$message}}</small>
+                <br>
+            @enderror
         </div>
 
         <div class="flex flex-row justify-center items-center space-x-6 mt-2">

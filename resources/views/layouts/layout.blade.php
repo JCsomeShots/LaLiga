@@ -55,10 +55,11 @@
        @yield('content')
     </main>
     <footer class="absolute bottom-0  w-11/12 rounded-xl ml-12">
-        <div class=" mx-auto flex justify-center  py-2  ">
-            <p class="txt byJC"> 
-                &copy; by JcSomeCodes
-            </p> 
+        <div class=" mx-auto flex justify-center  py-2 txt ">
+            <p> &copy; by &nbsp;&nbsp;&nbsp;JcSomeShots </p>
+            <a href="https://www.instagram.com/jcsomeshots/" class="cursor-pointer byJC mx-2 fa fa-instagram" aria-hidden="true"></a>
+            <p>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; JcSomeCodes </p> 
+            <a href="https://github.com/JCsomeShots" class="cursor-pointer byJC ml-2 fa fa-github " aria-hidden="true"></a>
         </div>
     </footer>
 </body>

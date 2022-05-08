@@ -27,16 +27,26 @@
            
             <tr>
                 <td class="txt py-3 font-base px-4 ">Modificar</th>
-                        <td class="txt py-3 pl-3 font-light cursor-pointer hover:text-yellow-900"><a class="fa fa-cogs" href="{{route('teamEdit' , $team)}}"></a></td>
+                        <td class="txt py-3 pl-1 font-light cursor-pointer hover:text-yellow-900"><a class="fa fa-cogs" href="{{route('teamEdit' , $team)}}"></a></td>
             </tr>
            
         </table>
     </div>
     <div class="blanco flex justify-center mt-2">
         <p class="text-xs mr-3"><small>Si quieres dar de baja a un equipo</small></p>
-        <form action="">
-            <small class="pincha blanco">pincha aquí</small>
-        </form>
+        <div class="pincha">
+
+            <form action="{{route('destroyTeam' , $team)}}" method="POST">
+                @csrf
+                @method('delete')
+                <button type="submit" class="txt py-3 mr-2 font-light cursor-pointer hover:text-yellow-900">
+                    <small class="pincha blanco ">pincha aquí</small>
+
+                </button>
+
+
+            </form>
+        </div>
         
         <p class="text-xs mr-3"><small>... por qué te vas? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small></p>
     </div>
