@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="tabla border-4 mx-10 flex flex-col justify-center items-center mt-9">
+<section class="tabla  mx-10 flex flex-col justify-center items-center mt-9">
     <h2 class="txt mt-4 text-2xl tracking-wider">Quieres dar de alta a un nuevo equipo</h2>
 
     <form action="{{route('teams.store')}}" method="post" class="flex flex-col  items-start my-9">

@@ -14,11 +14,11 @@ h1 {
     color: #fd7702;
 }
 .tabla {
-    border-color: #fd7702;
+    /* border-color: #fd7702; */
 }
 .tabla , .mismoEquipo , .puntos , footer , .cabecera {
-    background-color: #002347;
-    /* background-color: #000a13; */
+    /* background-color: #002347; */
+    background-color: #000a13;
 }
 .explicacio  {
     color: #ff5003;

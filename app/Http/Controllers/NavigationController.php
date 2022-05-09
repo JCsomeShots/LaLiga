@@ -60,6 +60,7 @@ class NavigationController extends Controller
         $team->save();
         return redirect()->route('showTeam', $team->id);
     }
+    
     public function organizationStore(Request $request){
         //return $request->all();
         if($request->nameLocal == $request->nameVisitor){

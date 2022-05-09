@@ -9,7 +9,7 @@
     <div class="flex justify-center mt-8 text-lg"><p class="blanco"> Si deseas más información clica sobre un equipo</p></div>
 
     <div class="cabeceraTabla flex justify-center items-center">
-        <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
+        <table class="tabla  w-screen mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
             <tr class="p-2 items-center text-sm">
                 <th class="txt py-3 pr-6 font-base pl-3 ">#</th>
                 <th class="txt py-3 pr-6 font-base text-left">Equipo</th>

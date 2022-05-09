@@ -7,7 +7,7 @@
 <section class="laTabla">
 
     <div class="cabeceraTabla flex justify-center items-center">
-        <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs mb-4">
+        <table class="tabla  w-screen mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs mb-4">
             <tr class="p-2 items-center text-sm">
                 <th class="txt py-3 pr-6 font-base pl-3 ">#</th>
                 <th class="txt py-3 pr-6 font-base  text-left">Equipo Local</th>

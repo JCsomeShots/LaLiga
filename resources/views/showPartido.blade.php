@@ -8,7 +8,7 @@
 <section class="laTabla">
     <div class="cabeceraTabla flex justify-center items-center">
 
-        <table class="tabla  w-screen border-4  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
+        <table class="tabla  w-screen  mx-auto text-slate-50 mt-9 mx-10 min-w-min max-w-5xl text-xs">
             <tr>
                 <td class="txt py-3 font-base pl-4 ">Equipo Local</th>
                 <td class="txt pl-3 font-base text-left">{{$partido->nameLocal}}</td>
