@@ -13,11 +13,10 @@ h1 {
 .textoCabecera , .tabla , .txt{
     color: #fd7702;
 }
-.tabla {
-    /* border-color: #fd7702; */
-}
+
 .tabla , .mismoEquipo , .puntos , footer , .cabecera {
     /* background-color: #002347; */
+    /* background-color: rgba(0, 0, 0, 0.9); */
     background-color: #000a13;
 }
 .explicacio  {
@@ -37,7 +36,7 @@ h1 {
     transform: scale(1.6);
 }
 .blanco {
-    color: aliceblue;
+    color: rgba(255,255,255, 0.7);
 }
 .pelota {
     background-color: aliceblue;

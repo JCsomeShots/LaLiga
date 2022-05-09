@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section style=" background-color: #000a13;" class="tabla  mx-10 flex flex-col justify-center items-center mt-9">
+<section style=" background-color: rgba(0, 0, 0, 0.6);" class="tabla flex flex-col justify-center items-center mt-14 mx-auto w-6/12 rounded-xl">
     <h2 class="txt mt-4 text-2xl tracking-wider" style="color: #fff;">Quieres modificar la información de tu equipo?</h2>
 
     <form action="{{route('updateTeam', $team)}}" method="post" class="flex flex-col  items-start my-9">
@@ -14,7 +14,7 @@
 
         <div class="flex flex-row justify-center items-center">
             <label for="nombreEquipo" style="color: #fd7702;" class="mr-11">Nombre del equipo</label>
-            <input type="text" id="nombreEquipo" name="name" size="40" class="pl-2 ml-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->name}}">
+            <input type="text" id="nombreEquipo" name="name" style="color: #fd7702;" size="40" class="pl-2 ml-2 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->name}}">
 
             @error('name')
                 <br>
@@ -25,7 +25,7 @@
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="sloganEquipo" style="color: #fd7702;" class="mr-12 ">Slogan del equipo</label>
-            <input type="text" id="sloganEquipo" name="slogan" size="40" class="pl-2 ml-3 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->slogan}}">
+            <input type="text" id="sloganEquipo" name="slogan" style="color: #fd7702;" size="40" class="pl-2 ml-3 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->slogan}}">
 
             @error('slogan')
                 <br>
@@ -36,7 +36,7 @@
 
         <div class="mt-2 flex flex-row justify-center items-center">
             <label for="club" style="color: #fd7702;" class="mr-12 ">Entidad deportiva</label>
-            <input type="text" id="club" name="club" size="40" class="pl-2 ml-3 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->club}}">
+            <input type="text" id="club" name="club" style="color: #fd7702;" size="40" class="pl-2 ml-4 rounded border focus:border-yellow-900 focus:outline-none focus:shadow-md" value="{{$team->club}}">
 
             @error('club')
                 <br>
@@ -54,7 +54,7 @@
             </select>
         </div>
 
-        <input type="submit" value="Edita este equipo" style="background-color: #036; text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
+        <input type="submit" value="Edita este equipo" style="background-color: #fd7702; color:#000a13;  text-align: center;" class="submit mx-auto px-3 py-1 ease-in duration-300 mt-4 rounded-lg bg-gray-400 shadow-lg cursor-pointer">
         
     </form>
 
