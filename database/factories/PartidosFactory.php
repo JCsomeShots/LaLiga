@@ -20,7 +20,9 @@ class PartidosFactory extends Factory
             'nameLocal' => $this->faker->sentence(), 
             'nameVisitor' => $this->faker->sentence(), 
             'status' => $this->faker->randomElement(['terminado','ejecucio','programado']),
-            'fecha' => $this->faker->localtime() 
+            'fecha' => $this->faker->date(),
+            'hora' => $this->faker->time(),
+
         ];
     }
 }

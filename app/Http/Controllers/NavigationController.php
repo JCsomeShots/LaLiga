@@ -65,7 +65,7 @@ class NavigationController extends Controller
         //return $request->all();
         if($request->nameLocal == $request->nameVisitor){
             return redirect()->route('mismoEquipo');
-        }
+         }
         
         $request->validate([
             'fecha' => 'required',

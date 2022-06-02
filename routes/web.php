@@ -48,5 +48,5 @@ Route::put('team/{team}', [NavigationController::class, 'updateTeam'])->name('up
 Route::put('partido/{partido}', [NavigationController::class, 'updatePartido'])->name('updatePartido');
 
 Route::delete('partido/{partido}', [NavigationController::class, 'destroyPartido'])->name('destroyPartido');
-
+ 
 Route::delete('team/{team}', [NavigationController::class, 'destroyTeam'])->name('destroyTeam');

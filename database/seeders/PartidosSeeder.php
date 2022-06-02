@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Partidos;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,6 @@ class PartidosSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Partidos::factory(10)->create();
     }
 }
