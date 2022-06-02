@@ -51,5 +51,7 @@ Pasos a seguir
 Si todo es correcto el proyecto podra utilizarse sin problemas
 
 
+![Clasification](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/team_Clasification.png)
+![Matches](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/matches_show.png)
+![Team](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/team_create.png)
 
-![Matches](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/ruta/asset/matches_show.png)
