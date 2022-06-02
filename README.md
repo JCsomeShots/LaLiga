@@ -52,4 +52,4 @@ Si todo es correcto el proyecto podra utilizarse sin problemas
 
 
 
-(https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/ruta/al/asset/img/matches_show.png)
+(https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/ruta/al/asset/matches_show.png)
