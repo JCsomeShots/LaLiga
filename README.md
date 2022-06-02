@@ -1,4 +1,4 @@
-# LaLiga
+# LaLiga  -- Laravel
 A calendar to schedule and modify your matches
 
 
@@ -55,8 +55,7 @@ Si todo es correcto el proyecto podra utilizarse sin problemas
 Programación del encuentro deportivo
 ![Matches](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/matches_show.png)
 
-creación de nuevo equipo
-![Team](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/team_create.png)
+
 
 
 
