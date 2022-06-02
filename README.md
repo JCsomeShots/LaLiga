@@ -3,7 +3,7 @@ A calendar to schedule and modify your matches
 
 
 Proyecto realizado dentro del Bootcamp del IT Academy. 
-Este proyecto esta realizado con Laravel y PHP siguiendo la arquitectura del MVC - CRUD
+Este proyecto esta realizado con Laravel , PHP , Tailwind siguiendo la arquitectura del MVC - CRUD
 
 
 
@@ -44,14 +44,15 @@ Pasos a seguir
 7.- Iniciar el servidor 
     -- Ingrese en terminal :  php artisan serve
     
-8.- Abrir un ventana del navegador
-    -- Escribir http://127.0.0.1:8000/ o vuestro servidor local
+8.- Abrir un ventana del navegador y escribir vuestro servidor local
 
 
 Si todo es correcto el proyecto podra utilizarse sin problemas
 
 
-![Clasification](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/team_Clasification.png)
-![Matches](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/matches_show.png)
-![Team](https://raw.githubusercontent.com/JCsomeShots/laLiga.git/main/asset/team_create.png)
+![Clasification](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/team_Clasification.png)
+![Matches](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/matches_show.png)
+![Team](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/team_create.png)
+
+
 
