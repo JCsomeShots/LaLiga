@@ -1,8 +1,17 @@
+
+
+
 # LaLiga  -- Laravel
 A calendar to schedule and modify your matches
 
 
+
 ![Clasification](https://raw.githubusercontent.com/JCsomeShots/laLiga/main/asset/team_Clasification.png)
+
+
+
+
+
 
 Proyecto realizado dentro del Bootcamp del IT Academy. 
 Este proyecto esta realizado con Laravel , PHP , Tailwind siguiendo la arquitectura del MVC - CRUD
@@ -50,6 +59,11 @@ Pasos a seguir
 
 
 Si todo es correcto el proyecto podra utilizarse sin problemas
+
+
+
+
+
 
 
 Programación del encuentro deportivo
